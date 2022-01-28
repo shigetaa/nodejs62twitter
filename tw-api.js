@@ -1,11 +1,12 @@
+require('dotenv').config();
 var Twit = require('twit');
 
 // 以下、正しいキーを設定してください
 var T = new Twit({
-	consumer_key: '',//API Key
-	consumer_secret: '',//API Key Secret
-	access_token: '',//Access Token
-	access_token_secret: ''//Access Token Secret
+	consumer_key: process.env.CONSUMER_KEY,//API Key
+	consumer_secret: process.env.CONSUMER_SECRET,//API Key Secret
+	access_token: process.env.ACCESS_TOKEN,//Access Token
+	access_token_secret: process.env.ACCESS_TOKEN_SECRET//Access Token Secret
 });
 
 // JavaScriptに関するつぶやきを表示する
